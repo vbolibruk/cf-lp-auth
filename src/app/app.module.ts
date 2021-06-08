@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LivepersonDirective } from './liveperson/liveperson.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LivepersonDirective,
   ],
   imports: [
     BrowserModule,
