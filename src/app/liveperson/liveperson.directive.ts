@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Directive, ElementRef } from '@angular/core';
+import { Directive } from '@angular/core';
+import { environment } from '../../environments/environment'
 
 interface LpConfig {
   redirectURI: string,
@@ -16,12 +16,8 @@ export class LivepersonDirective {
   private lpTag: any;
   constructor() {
     this.lpTag = (window as any).lpTag as any;
-    this.config = {
-      redirectURI: "http://localhost:4200",
-      authURI: "https://orion-la2-dev.eu.auth0.com/authorize",
-      clientID: "1xdDKDUDZs5SM1LIhVSQUnfCzfQHo7cH",
-      response_type: "code",
-    };
+    const { redirectURI, authURI, clientID, response_type } = environment;
+    this.config = { redirectURI, authURI, clientID, response_type };
 
     this.lpTag.identities = [];
     this.lpTag.identities.push(this.identityFn);

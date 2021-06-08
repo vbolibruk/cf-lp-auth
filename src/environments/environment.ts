@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  redirectURI: "http://localhost:4200",
+  authURI: "https://orion-la2-dev.eu.auth0.com/authorize",
+  clientID: "1xdDKDUDZs5SM1LIhVSQUnfCzfQHo7cH",
+  response_type: "code",
 };
 
 /*
